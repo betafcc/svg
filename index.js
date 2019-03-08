@@ -10,7 +10,7 @@ const _svg = props => ({
   attrs(a) { return (a === undefined) ? props.attrs : _svg({...props, attrs: a}) },
   viewBox(v) { return (v === undefined) ? props.viewBox : _svg({...props, viewBox: v}) },
   options(o) { return (o === undefined) ? props.options : _svg({...props, options: {...props.options, ...o}}) },
-  call(f) { return (f === undefined) ? props.call : _svg({...props, call: (_s => { props.call(_s); f(_s); }) }) },
+  call(f) { return (f === undefined) ? props.call : _svg({...props, call: ((_s, _self) => { props.call(_s, _self); f(_s, _self); }) }) },
 
   toString() {
     const d3n = new D3Node(props.options)
@@ -18,7 +18,7 @@ const _svg = props => ({
     props.call(d3n.createSVG(props.width, props.height, {
       ...props.attrs,
       viewBox: props.viewBox || undefined,
-    }))
+    }), _svg(props))
 
     return d3n.svgString()
   },
