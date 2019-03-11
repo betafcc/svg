@@ -1,6 +1,6 @@
 {
   "name": "@betafcc/svg",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/betafcc/svg#readme",
   "dependencies": {
-    "d3-node": "^2.1.0",
     "jsdom": "^14.0.0",
     "svg-to-pdfkit": "^0.1.7"
   }
