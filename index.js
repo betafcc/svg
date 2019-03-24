@@ -1,1 +1,1 @@
-module.exports = require('./lib/node').create()
+module.exports = require("./dist/isomorphic").create();
