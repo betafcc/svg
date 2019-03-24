@@ -1,0 +1,25 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Beta Faccion <betafcc@gmail.com> (https://github.com/betafcc)",
+  "license": "MIT",
+  "dependencies": {
+    "blob-stream": "^0.1.3",
+    "d3": "^5.9.2",
+    "d3-selection-multi": "^1.0.1",
+    "pdfkit": "^0.9.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^5.7.1",
+    "@types/d3-selection-multi": "^1.0.7",
+    "parcel": "^1.12.3",
+    "typescript": "^3.3.4000"
+  }
+}

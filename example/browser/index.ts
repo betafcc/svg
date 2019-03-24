@@ -1,7 +1,7 @@
 import * as d3 from 'd3'
 import 'd3-selection-multi'
 
-import { SVG } from '../src'
+import svg from '../../index.js'
 
 
 import PDFDocument from 'pdfkit'
@@ -13,8 +13,7 @@ const doc = new PDFDocument();
 const stream = doc.pipe(blobStream());
 
 
-SVG
-  .create()
+svg
   .call(node =>
     d3
     .select(node)
@@ -23,7 +22,7 @@ SVG
       cx: 50,
       cy: 50,
       r: 50,
-      fill: 'red'
+      fill: 'green'
     })
   )
   .toPDFKit(doc)
