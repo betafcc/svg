@@ -1,7 +1,7 @@
 import { JSDOM } from "jsdom";
 import { SVGSVGElementSerializer } from "./interface";
 
-export const nodeSVGSVGElementSerializer: SVGSVGElementSerializer = {
+export const serializer: SVGSVGElementSerializer = {
   fromString(s: string): SVGSVGElement {
     return new JSDOM(s).window.document.querySelector("svg") as SVGSVGElement;
   },

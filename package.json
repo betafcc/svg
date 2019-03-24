@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +21,13 @@
   "homepage": "https://github.com/betafcc/svg#readme",
   "dependencies": {
     "jsdom": "^14.0.0",
+    "pdfkit": "^0.9.0",
     "svg-to-pdfkit": "^0.1.7"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^12.2.3",
+    "@types/pdfkit": "^0.7.36",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.3.4000"
   }
 }

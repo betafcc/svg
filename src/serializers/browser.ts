@@ -1,6 +1,6 @@
 import { SVGSVGElementSerializer } from "./interface";
 
-export const browserSVGSVGElementSerializer: SVGSVGElementSerializer = {
+export const serializer: SVGSVGElementSerializer = {
   fromString(s: string): SVGSVGElement {
     return (new DOMParser().parseFromString(s, "image/svg+xml")
       .documentElement as unknown) as SVGSVGElement;

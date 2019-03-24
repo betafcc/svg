@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "*": ["types/*"] },
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2018", "dom"],
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
