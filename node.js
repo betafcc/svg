@@ -1,1 +1,1 @@
-module.exports = require("./dist/node").create();
+module.exports = require("./dist/node").SVG.create();

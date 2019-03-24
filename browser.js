@@ -1,1 +1,1 @@
-module.exports = require("./dist/browser").create();
+module.exports = require("./dist/browser").SVG.create();

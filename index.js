@@ -1,1 +1,1 @@
-module.exports = require("./dist/isomorphic").create();
+module.exports = require("./dist/isomorphic").SVG.create();
