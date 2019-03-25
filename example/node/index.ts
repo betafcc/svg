@@ -3,13 +3,13 @@ import * as d3 from 'd3'
 import 'd3-selection-multi'
 import PDFDocument from 'pdfkit'
 
-import { SVGNode as SVG } from '../../dist'
+import svg from '../../dist'
 
 const doc = new PDFDocument()
 
 doc.pipe(fs.createWriteStream('output.pdf'))
 
-SVG.create()
+svg
   .call(node =>
     d3
       .select(node)

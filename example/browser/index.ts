@@ -1,7 +1,7 @@
 import * as d3 from 'd3'
 import 'd3-selection-multi'
 
-import svg from '../../index.js'
+import svg from '../../dist/index.js'
 
 
 import PDFDocument from 'pdfkit'
