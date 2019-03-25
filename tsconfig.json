@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": { "*": ["types/*"] },
     "target": "es5",
+    "outDir": "dist",
+    "rootDir": "src",
+    "removeComments": true,
+    "moduleResolution": "node",
     "module": "commonjs",
+    "declaration": true,
+    "inlineSourceMap": true,
+    "esModuleInterop": true,
+    "typeRoots": ["node_modules/@types", "src/types"],
     "lib": ["es2018", "dom"],
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true
+    "strict": true
   },
-  "include": [
-    "src/**/*"
-  ]
+  "formatCodeOptions": {
+    "indentSize": 2,
+    "tabSize": 2
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/**"]
 }

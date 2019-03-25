@@ -1,26 +1,26 @@
-import fs from "fs";
-import * as d3 from "d3";
-import "d3-selection-multi";
-import PDFDocument from "pdfkit";
+import fs from 'fs'
+import * as d3 from 'd3'
+import 'd3-selection-multi'
+import PDFDocument from 'pdfkit'
 
-import svg from "../../index.js";
+import { SVGNode as SVG } from '../../dist'
 
-const doc = new PDFDocument();
+const doc = new PDFDocument()
 
-doc.pipe(fs.createWriteStream("output.pdf"));
+doc.pipe(fs.createWriteStream('output.pdf'))
 
-svg
+SVG.create()
   .call(node =>
     d3
       .select(node)
-      .append("circle")
+      .append('circle')
       .attrs({
         cx: 50,
         cy: 50,
         r: 50,
-        fill: "green"
+        fill: 'green'
       })
   )
-  .toPDFKit(doc);
+  .toPDFKit(doc)
 
-doc.end();
+doc.end()
