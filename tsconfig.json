@@ -6,8 +6,6 @@
     "removeComments": true,
     "moduleResolution": "node",
     "module": "commonjs",
-    "declaration": true,
-    "inlineSourceMap": true,
     "esModuleInterop": true,
     "typeRoots": ["node_modules/@types", "src/types"],
     "lib": ["es2018", "dom"],

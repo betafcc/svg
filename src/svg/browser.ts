@@ -18,13 +18,17 @@ export class SVGBrowser {
   constructor(readonly materialize: () => SVGSVGElement) {}
 
   /**
-   * Create a default, empty svg element
+   *
+   *
    * @static
-   * @returns {SVGBrowser} svg element corresponding to the code:
+   * @template T Class or subclass of SVGBrowser
+   * @param {T} this
+   * @returns {InstanceType<T>} svg element corresponding to the code:
    * ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>```
+   * @memberof SVGBrowser
    */
-  static create(): SVGBrowser {
+  static create<T extends typeof SVGBrowser>(this: T): InstanceType<T> {
     return this.fromString(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"></svg>`)
   }
 
@@ -40,11 +44,16 @@ export class SVGBrowser {
 `)
    * 
    * @static
+   * @template T Class or subclass of SVGBrowser
+   * @param {T} this
    * @param {string} s The svg code to parse
-   * @returns {SVGBrowser}
+   * @returns {InstanceType<T>}
+   * @memberof SVGBrowser
    */
-  static fromString(s: string): SVGBrowser {
-    return new this(() => this.serializer.fromString(s))
+  static fromString<T extends typeof SVGBrowser>(this: T, s: string): InstanceType<T> {
+    // polymorphic 'this' in static methods workaround
+    // https://github.com/Microsoft/TypeScript/issues/5863#issuecomment-410887254
+    return new this(() => this.serializer.fromString(s)) as InstanceType<T>
   }
 
   toString(): string {
