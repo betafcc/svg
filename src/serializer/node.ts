@@ -1,4 +1,3 @@
-// import { JSDOM } from 'jsdom'
 import { SVGSVGElementSerializer } from './serializer'
 
 export const nodeSerializer: SVGSVGElementSerializer = {

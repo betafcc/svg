@@ -1,3 +1,4 @@
-export { Serializer, SVGSVGElementSerializer } from './serializer'
-export { nodeSerializer } from './node'
-export { browserSerializer } from './browser'
+export * from './serializer'
+export * from './node'
+export * from './browser'
+export * from './isomorphic'

@@ -12,10 +12,20 @@ export class SVGBrowser {
   static serializer = browserSerializer
 
   /**
-   * Creates an instance of SVG.
-   * @param {() => SVGSVGElement} materialize
+   * The function that will actually create the SVGSVGElement
+   *
+   * @memberof SVGBrowser
    */
-  constructor(readonly materialize: () => SVGSVGElement) {}
+  readonly materialize: () => SVGSVGElement
+
+  /**
+   * Creates an instance of SVGBrowser.
+   * @param {() => SVGSVGElement} materialize The function that will actually create the SVGSVGElement
+   * @memberof SVGBrowser
+   */
+  constructor(materialize: () => SVGSVGElement) {
+    this.materialize = materialize
+  }
 
   /**
    *

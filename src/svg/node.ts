@@ -1,4 +1,4 @@
-import { nodeSerializer } from '../serializer/node'
+import { nodeSerializer } from '../serializer'
 import { SVGBrowser } from './browser'
 
 export class SVGNode extends SVGBrowser {

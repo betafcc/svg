@@ -1,3 +1,3 @@
-export { SVGBrowser } from './browser'
-export { SVGNode } from './node'
-export { SVGIsomorphic } from './isomorphic'
+export * from './browser'
+export * from './node'
+export * from './isomorphic'
